@@ -116,6 +116,7 @@ const About = () => {
                 endIcon={<ArrowOutwardIcon />}
                 href="/resume.pdf"
                 target="_blank"
+                style={{ color: "#ffffff" }}
               >
                 View Resume
               </Button>
