@@ -226,7 +226,7 @@ const BlogDetail = () => {
                     <Box className="blog-sidebar-posts">
                       {blogData
                         .filter(post => post.day !== blog.day)
-                        .slice(0, 3)
+                        .slice(0, 9)
                         .map((post) => (
                           <Box 
                             key={post.day} 
@@ -256,19 +256,6 @@ const BlogDetail = () => {
                             </Box>
                           </Box>
                         ))}
-                    </Box>
-                  </Box>
-                  
-                  <Box className="blog-sidebar-section">
-                    <Typography variant="h6" className="blog-sidebar-heading">
-                      Categories
-                    </Typography>
-                    <Box className="blog-sidebar-categories">
-                      <Button className="blog-category-button">Web Development</Button>
-                      <Button className="blog-category-button">UI/UX Design</Button>
-                      <Button className="blog-category-button">Performance</Button>
-                      <Button className="blog-category-button">Accessibility</Button>
-                      <Button className="blog-category-button">Frontend</Button>
                     </Box>
                   </Box>
                 </Box>

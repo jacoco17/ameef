@@ -182,7 +182,7 @@ body {
 }
 
 .premium-nav-link {
-  color: #ccd6f6 !important; /* Light text for navbar links */
+  color: #ffffff !important; /* White text for navbar links */
   font-weight: 600 !important;
   font-size: 16px !important;
   text-decoration: none !important;
@@ -233,7 +233,7 @@ body {
 }
 
 .premium-menu-link {
-  color: #ccd6f6 !important; /* Light text for navbar mobile links */
+  color: #ffffff !important; /* White text for navbar mobile links */
   text-decoration: none !important;
   font-weight: 600 !important;
   font-size: 16px !important;

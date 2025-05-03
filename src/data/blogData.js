@@ -125,6 +125,42 @@ export const blogData = [
       { src: "/blog/day7-8.jpg", alt: "Feature roadmap", caption: "Planning the next features roadmap" },
       { src: "/blog/day7-9.jpg", alt: "Team retrospective", caption: "Conducting project retrospective with the team" }
     ]
+  },
+  {
+    day: 8,
+    title: "State Management Deep Dive",
+    summary: "Exploring modern state management patterns and implementing a robust state architecture.",
+    coverImage: "/blog/day8-cover.jpg",
+    content: "Today I took a deep dive into modern state management patterns. As applications grow in complexity, having a well-structured approach to state becomes crucial. I compared different libraries and approaches including Redux, Zustand, Jotai, and React's built-in Context API. After careful consideration, I implemented a hybrid solution that utilizes Context for global UI state and a more specialized library for complex data management. This approach provides the right balance of simplicity, performance, and developer experience.",
+    images: [
+      { src: "/blog/day8-1.jpg", alt: "State architecture", caption: "Designing the state architecture diagram" },
+      { src: "/blog/day8-2.jpg", alt: "Redux vs alternatives", caption: "Comparing Redux with modern alternatives" },
+      { src: "/blog/day8-3.jpg", alt: "Context implementation", caption: "Implementing React Context providers" },
+      { src: "/blog/day8-4.jpg", alt: "State debugging", caption: "Setting up debugging tools for state inspection" },
+      { src: "/blog/day8-5.jpg", alt: "Immutable patterns", caption: "Working with immutable state patterns" },
+      { src: "/blog/day8-6.jpg", alt: "Performance testing", caption: "Testing state management performance" },
+      { src: "/blog/day8-7.jpg", alt: "Data flow diagram", caption: "Visualizing the application data flow" },
+      { src: "/blog/day8-8.jpg", alt: "Selector patterns", caption: "Implementing efficient selector patterns" },
+      { src: "/blog/day8-9.jpg", alt: "State persistence", caption: "Adding state persistence and hydration" }
+    ]
+  },
+  {
+    day: 9,
+    title: "API Integration and Data Fetching",
+    summary: "Building robust API integration with error handling, caching, and optimistic updates.",
+    coverImage: "/blog/day9-cover.jpg",
+    content: "API integration was the focus of today's work. I implemented a comprehensive data fetching strategy that includes proper loading states, error handling, retry mechanisms, and caching. Using React Query, I was able to significantly improve the user experience with background updates and optimistic UI changes. I also added a mock API service for development and testing purposes, allowing the team to work efficiently without depending on the backend being available. The resulting data layer is both robust and flexible, making future feature development much smoother.",
+    images: [
+      { src: "/blog/day9-1.jpg", alt: "API architecture", caption: "Designing the API integration architecture" },
+      { src: "/blog/day9-2.jpg", alt: "React Query setup", caption: "Setting up React Query for data fetching" },
+      { src: "/blog/day9-3.jpg", alt: "Error handling", caption: "Implementing comprehensive error handling" },
+      { src: "/blog/day9-4.jpg", alt: "Loading states", caption: "Designing loading state skeletons" },
+      { src: "/blog/day9-5.jpg", alt: "Cache strategy", caption: "Developing the caching strategy" },
+      { src: "/blog/day9-6.jpg", alt: "Mock services", caption: "Building mock API services for development" },
+      { src: "/blog/day9-7.jpg", alt: "Optimistic updates", caption: "Implementing optimistic UI updates" },
+      { src: "/blog/day9-8.jpg", alt: "Network resilience", caption: "Adding offline support and resilience" },
+      { src: "/blog/day9-9.jpg", alt: "API documentation", caption: "Creating comprehensive API documentation" }
+    ]
   }
 ];
 
