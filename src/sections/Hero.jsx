@@ -17,16 +17,40 @@ const Hero = () => {
       if (!imageRef.current) return;
       
       const { clientX, clientY } = e;
-      const xPos = (window.innerWidth / 2 - clientX) / 25;
-      const yPos = (window.innerHeight / 2 - clientY) / 25;
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
       
-      imageRef.current.style.transform = `translate(${xPos}px, ${yPos}px) scale(1.02)`;
+      // Calculate distance from center as a percentage (reduced intensity)
+      const xPos = (windowWidth / 2 - clientX) / 35;
+      const yPos = (windowHeight / 2 - clientY) / 35;
+      
+      // Apply transform with hardware acceleration
+      requestAnimationFrame(() => {
+        imageRef.current.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(1.02)`;
+      });
+    };
+    
+    // Smoothly reset position when mouse leaves window
+    const handleMouseLeave = () => {
+      if (!imageRef.current) return;
+      
+      imageRef.current.style.transition = 'transform 0.8s ease-out';
+      imageRef.current.style.transform = 'translate3d(0, 0, 0) scale(1.02)';
+      
+      // Return to faster transition after reset animation completes
+      setTimeout(() => {
+        if (imageRef.current) {
+          imageRef.current.style.transition = 'transform 0.05s linear';
+        }
+      }, 800);
     };
     
     window.addEventListener('mousemove', handleMouseMove);
+    document.body.addEventListener('mouseleave', handleMouseLeave);
     
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      document.body.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
   
@@ -96,8 +120,8 @@ const Hero = () => {
                   boxShadow: '0 20px 40px rgba(50, 69, 99, 0.2)',
                   overflow: 'hidden',
                   width: '340px',
-                  height: '420px',
-                  background: 'linear-gradient(135deg, #324563, #00cfff)',
+                  height: '400px',
+                  background: 'linear-gradient(135deg, #324563, rgb(180, 50, 50))',
                   padding: '8px'
                 }}
               >
@@ -110,7 +134,12 @@ const Hero = () => {
                     borderRadius: '18px',
                     overflow: 'hidden',
                     position: 'relative',
-                    background: '#fff'
+                    background: '#fff',
+                    willChange: 'transform',
+                    backfaceVisibility: 'hidden',
+                    transformStyle: 'preserve-3d',
+                    transition: 'transform 0.05s linear', // Smoother transition
+                    transformOrigin: 'center center'
                   }}
                 >
                   <Box 
@@ -122,7 +151,7 @@ const Hero = () => {
                       width: '100%',
                       height: '100%',
                       objectFit: 'cover',
-                      objectPosition: 'center',
+                      objectPosition: 'top center',
                       display: 'block'
                     }}
                     onError={(e) => {
@@ -141,7 +170,7 @@ const Hero = () => {
                     width: '80px',
                     height: '80px',
                     borderRadius: '50%',
-                    background: 'rgba(0, 207, 255, 0.2)',
+                    background: 'rgba(180, 50, 50, 0.2)',
                     filter: 'blur(30px)'
                   }}
                 />

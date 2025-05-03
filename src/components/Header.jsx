@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { AppBar, Toolbar, Typography, Box, Container, IconButton, useScrollTrigger, Slide, Menu, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CodeIcon from '@mui/icons-material/Code';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 // Hide header on scroll down
 function HideOnScroll(props) {
@@ -17,10 +19,10 @@ function HideOnScroll(props) {
 
 const navItems = [
   { label: 'About', href: '#about', id: 'about' },
+  { label: 'Blog', href: '#blog', id: 'blog' },
   { label: 'Education', href: '#education', id: 'education' },
   { label: 'Skills', href: '#skills', id: 'skills' },
   { label: 'Projects', href: '#projects', id: 'projects' },
-  { label: 'Blog', href: '#blog', id: 'blog' },
   { label: 'Contact', href: '#contact', id: 'contact' },
 ];
 
@@ -85,15 +87,21 @@ export default function Header() {
               }}
             >
               <CodeIcon sx={{ mr: 1, fontSize: 32 }} />
-              Ameeff.dev
+              MeeffyTech
             </Typography>
             
             {/* Contact Info (Desktop) */}
             <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto', mr: 5, alignItems: 'center' }}>
               <Typography variant="caption" className="premium-contact-info">
-                <span className="contact-item">+63 912 345 6789</span>
+                {/* <a href="mailto:ameef@example.com" className="contact-item">
+                  <EmailIcon fontSize="small" />
+                  ameef@example.com
+                </a> */}
                 <span className="contact-divider">•</span>
-                <span className="contact-item">ameeff@example.com</span>
+                {/* <a href="tel:+639123456789" className="contact-item">
+                  <PhoneIcon fontSize="small" />
+                  +63 912 345 6789
+                </a> */}
               </Typography>
             </Box>
             

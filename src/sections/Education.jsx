@@ -53,14 +53,21 @@ const Education = () => {
           <Typography variant="h2" component="h2" className="education-title">
             Education
           </Typography>
+          <Typography 
+            className="education-subtitle" 
+            sx={{ textAlign: 'center', maxWidth: '700px', mx: 'auto' }}
+          >
+            My academic journey through various institutions that shaped my knowledge and expertise
+          </Typography>
         </Box>
 
         {/* Education Cards */}
         <Box className="education-cards">
-          {educationData.map((item) => (
+          {educationData.map((item, index) => (
             <Card 
               key={item.id}
               className={`education-card ${inView ? 'fade-in' : ''}`}
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <Box className="education-logo-container">
                 <img 

@@ -17,6 +17,7 @@
   --text-primary: rgb(35, 47, 67);
   --text-secondary: rgb(43, 58, 84);
   --accent: rgb(225, 235, 245);
+  --accent-red: rgb(180, 50, 50); /* Deep red accent color */
   
   /* Shared variables */
   --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -121,7 +122,7 @@ body {
 }
 
 .theme-toggle:hover {
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(180, 50, 50, 0.1);
 }
 
 .theme-toggle svg {
@@ -130,7 +131,7 @@ body {
 
 /* Rest of the CSS with updated colors */
 .premium-logo {
-  color: var(--primary) !important;
+  color: #ffffff !important; /* Always white logo text */
   font-family: var(--font-sans) !important;
   text-transform: none !important;
   letter-spacing: 1px !important;
@@ -139,7 +140,7 @@ body {
 }
 
 .premium-logo:hover {
-  color: #ffffff !important; /* White text on dark navbar */
+  color: var(--accent-red) !important; /* Dark red on hover */
   transform: translateY(-2px) !important;
 }
 
@@ -149,20 +150,35 @@ body {
   font-size: 14px !important;
   display: flex !important;
   align-items: center !important;
-  gap: 8px !important;
+  gap: 12px !important;
+  transition: var(--transition) !important;
+  padding: 6px 0 !important;
+  border-radius: 4px !important;
 }
 
 .contact-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: #ccd6f6 !important;
   transition: var(--transition) !important;
+  text-decoration: none !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
 .contact-item:hover {
-  color: var(--primary) !important;
+  color: var(--accent-red) !important;
+  background-color: rgba(255, 255, 255, 0.07) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 .contact-divider {
   color: #233554 !important; /* Accent color for navbar divider */
-  font-size: 8px !important;
+  font-size: 10px !important;
 }
 
 .premium-nav-link {
@@ -189,7 +205,7 @@ body {
 }
 
 .premium-nav-link:hover {
-  color: var(--primary) !important;
+  color: var(--accent-red) !important;
 }
 
 .premium-nav-link:hover::before {
@@ -197,12 +213,12 @@ body {
 }
 
 .premium-nav-link.active {
-  color: #00cfff !important;
+  color: var(--accent-red) !important;
 }
 
 .premium-nav-link.active::before {
   width: 100% !important;
-  background-color: #00cfff !important;
+  background-color: var(--accent-red) !important;
 }
 
 .premium-menu-button {
@@ -230,7 +246,7 @@ body {
 
 .premium-menu-link:hover, 
 .premium-menu-link.active {
-  color: var(--primary) !important;
+  color: var(--accent-red) !important;
 }
 
 /* Section Divider */
@@ -251,9 +267,9 @@ body {
   transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
-  background-color: var(--secondary);
+  background-color: var(--accent-red);
   border-radius: 50%;
-  box-shadow: 0 0 15px 5px rgba(0,191,255,0.2);
+  box-shadow: 0 0 15px 5px rgba(180, 50, 50, 0.3);
 }
 
 /* Typography */

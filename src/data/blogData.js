@@ -12,7 +12,10 @@ export const blogData = [
       { src: "/blog/day1-3.jpg", alt: "Project planning", caption: "Planning the architecture of the project" },
       { src: "/blog/day1-4.jpg", alt: "React documentation", caption: "Studying the latest React features" },
       { src: "/blog/day1-5.jpg", alt: "Dev tools", caption: "Setting up developer tools and extensions" },
-      { src: "/blog/day1-6.jpg", alt: "Initial commit", caption: "Making the first commit to the repository" }
+      { src: "/blog/day1-6.jpg", alt: "Initial commit", caption: "Making the first commit to the repository" },
+      { src: "/blog/day1-7.jpg", alt: "Team collaboration", caption: "Collaborating with team members on requirements" },
+      { src: "/blog/day1-8.jpg", alt: "Frontend concepts", caption: "Whiteboard diagram of frontend architecture" },
+      { src: "/blog/day1-9.jpg", alt: "Learning resources", caption: "Curated learning resources and tutorials" }
     ]
   },
   {
@@ -27,7 +30,10 @@ export const blogData = [
       { src: "/blog/day2-3.jpg", alt: "Testing components", caption: "Testing components in Storybook" },
       { src: "/blog/day2-4.jpg", alt: "Component props", caption: "Defining component props and interfaces" },
       { src: "/blog/day2-5.jpg", alt: "Component library", caption: "Organizing the component library" },
-      { src: "/blog/day2-6.jpg", alt: "Documentation", caption: "Documenting component usage and examples" }
+      { src: "/blog/day2-6.jpg", alt: "Documentation", caption: "Documenting component usage and examples" },
+      { src: "/blog/day2-7.jpg", alt: "Component patterns", caption: "Implementing advanced component patterns" },
+      { src: "/blog/day2-8.jpg", alt: "Performance review", caption: "Reviewing component performance metrics" },
+      { src: "/blog/day2-9.jpg", alt: "Code review", caption: "Team code review for the component system" }
     ]
   },
   {
@@ -42,7 +48,10 @@ export const blogData = [
       { src: "/blog/day3-3.jpg", alt: "Responsive testing", caption: "Testing on multiple devices" },
       { src: "/blog/day3-4.jpg", alt: "Desktop layout", caption: "Fine-tuning the desktop experience" },
       { src: "/blog/day3-5.jpg", alt: "CSS Grid implementation", caption: "Implementing CSS Grid layouts" },
-      { src: "/blog/day3-6.jpg", alt: "Media queries", caption: "Setting up breakpoints with media queries" }
+      { src: "/blog/day3-6.jpg", alt: "Media queries", caption: "Setting up breakpoints with media queries" },
+      { src: "/blog/day3-7.jpg", alt: "Responsive images", caption: "Optimizing images for different viewports" },
+      { src: "/blog/day3-8.jpg", alt: "Typography scaling", caption: "Implementing responsive typography" },
+      { src: "/blog/day3-9.jpg", alt: "Navigation design", caption: "Creating responsive navigation menus" }
     ]
   },
   {
@@ -57,7 +66,10 @@ export const blogData = [
       { src: "/blog/day4-3.jpg", alt: "Animation testing", caption: "Testing animation performance" },
       { src: "/blog/day4-4.jpg", alt: "Framer Motion", caption: "Implementing animations with Framer Motion" },
       { src: "/blog/day4-5.jpg", alt: "CSS transitions", caption: "Fine-tuning CSS transitions" },
-      { src: "/blog/day4-6.jpg", alt: "Animation principles", caption: "Applying animation principles for natural movement" }
+      { src: "/blog/day4-6.jpg", alt: "Animation principles", caption: "Applying animation principles for natural movement" },
+      { src: "/blog/day4-7.jpg", alt: "Animation timelines", caption: "Orchestrating complex animation sequences" },
+      { src: "/blog/day4-8.jpg", alt: "Performance monitoring", caption: "Monitoring animation performance" },
+      { src: "/blog/day4-9.jpg", alt: "User feedback", caption: "User feedback on animation effects" }
     ]
   },
   {
@@ -72,7 +84,10 @@ export const blogData = [
       { src: "/blog/day5-3.jpg", alt: "Load time improvement", caption: "Before and after load time comparison" },
       { src: "/blog/day5-4.jpg", alt: "Code splitting", caption: "Implementing code splitting strategies" },
       { src: "/blog/day5-5.jpg", alt: "Image optimization", caption: "Optimizing images for faster loading" },
-      { src: "/blog/day5-6.jpg", alt: "Lighthouse audit", caption: "Reviewing Lighthouse audit results" }
+      { src: "/blog/day5-6.jpg", alt: "Lighthouse audit", caption: "Reviewing Lighthouse audit results" },
+      { src: "/blog/day5-7.jpg", alt: "Caching strategies", caption: "Implementing efficient caching strategies" },
+      { src: "/blog/day5-8.jpg", alt: "Network profiling", caption: "Analyzing network waterfall charts" },
+      { src: "/blog/day5-9.jpg", alt: "Bundle analysis", caption: "Webpack bundle analysis and optimization" }
     ]
   },
   {
@@ -87,7 +102,10 @@ export const blogData = [
       { src: "/blog/day6-3.jpg", alt: "Keyboard navigation", caption: "Implementing keyboard navigation" },
       { src: "/blog/day6-4.jpg", alt: "ARIA attributes", caption: "Adding appropriate ARIA attributes" },
       { src: "/blog/day6-5.jpg", alt: "Focus states", caption: "Designing clear focus states" },
-      { src: "/blog/day6-6.jpg", alt: "Semantic HTML", caption: "Using semantic HTML elements" }
+      { src: "/blog/day6-6.jpg", alt: "Semantic HTML", caption: "Using semantic HTML elements" },
+      { src: "/blog/day6-7.jpg", alt: "Accessibility tooling", caption: "Setting up accessibility testing tools" },
+      { src: "/blog/day6-8.jpg", alt: "User testing", caption: "Conducting accessibility user testing" },
+      { src: "/blog/day6-9.jpg", alt: "WCAG compliance", caption: "Verifying WCAG 2.1 compliance" }
     ]
   },
   {
@@ -102,7 +120,10 @@ export const blogData = [
       { src: "/blog/day7-3.jpg", alt: "Launch celebration", caption: "Celebrating the successful launch" },
       { src: "/blog/day7-4.jpg", alt: "Bug fixes", caption: "Addressing last-minute bug fixes" },
       { src: "/blog/day7-5.jpg", alt: "Documentation", caption: "Updating the project documentation" },
-      { src: "/blog/day7-6.jpg", alt: "User feedback", caption: "Collecting initial user feedback" }
+      { src: "/blog/day7-6.jpg", alt: "User feedback", caption: "Collecting initial user feedback" },
+      { src: "/blog/day7-7.jpg", alt: "Analytics setup", caption: "Setting up analytics and monitoring" },
+      { src: "/blog/day7-8.jpg", alt: "Feature roadmap", caption: "Planning the next features roadmap" },
+      { src: "/blog/day7-9.jpg", alt: "Team retrospective", caption: "Conducting project retrospective with the team" }
     ]
   }
 ];
