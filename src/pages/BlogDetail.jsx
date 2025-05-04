@@ -15,19 +15,8 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Header from '../components/Header';
 import '../assets/premium-blog-detail.css';
 
-// Import the blog data
+// Import the blog data only, remove fallbackImages
 import { blogData } from '../data/blogData';
-
-// Keeping fallback images in this component
-const fallbackImages = [
-  "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-  "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-  "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-  "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-  "https://images.unsplash.com/photo-1544256718-3bcf237f3974?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-  "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-  "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-];
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -53,11 +42,6 @@ const BlogDetail = () => {
       window.scrollTo(0, 0);
     }
   }, [id]);
-  
-  const getImage = (src, index, day) => {
-    if (src && src.startsWith('http')) return src;
-    return fallbackImages[(day - 1 + index) % fallbackImages.length];
-  };
   
   if (!blog) {
     return (
@@ -104,19 +88,15 @@ const BlogDetail = () => {
           </Container>
         </Box>
         
-        {/* Main Image */}
+        {/* Main Image - use direct path */}
         <Box className="blog-detail-hero-container">
           <Container>
             <Box className="blog-detail-hero-image-container">
               <Box
                 component="img"
-                src={getImage(blog.coverImage, 0, blog.day)}
+                src={blog.coverImage}
                 alt={blog.title}
                 className="blog-detail-hero-image"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = fallbackImages[blog.day % fallbackImages.length];
-                }}
               />
             </Box>
           </Container>
@@ -154,13 +134,9 @@ const BlogDetail = () => {
                       <Box key={index} className="blog-detail-gallery-item">
                         <Box
                           component="img"
-                          src={getImage(image.src, index, blog.day)}
+                          src={image.src}
                           alt={image.alt}
                           className="blog-detail-gallery-image"
-                          onError={(e) => {
-                            e.target.onerror = null;
-                            e.target.src = fallbackImages[(blog.day + index) % fallbackImages.length];
-                          }}
                         />
                         <Typography className="blog-detail-gallery-caption">
                           {image.caption}
@@ -237,13 +213,9 @@ const BlogDetail = () => {
                             <Box className="blog-sidebar-post">
                               <Box
                                 component="img"
-                                src={getImage(post.coverImage, 0, post.day)}
+                                src={post.coverImage}
                                 alt={post.title}
                                 className="blog-sidebar-post-image"
-                                onError={(e) => {
-                                  e.target.onerror = null;
-                                  e.target.src = fallbackImages[post.day % fallbackImages.length];
-                                }}
                               />
                               <Box className="blog-sidebar-post-content">
                                 <Typography variant="caption" className="blog-sidebar-post-day">

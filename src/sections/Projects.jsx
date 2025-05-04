@@ -10,8 +10,8 @@ const projects = [
     id: 1,
     name: 'E-Commerce Dashboard',
     desc: 'A comprehensive admin dashboard for e-commerce platforms with sales analytics and inventory management.',
-    image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    tag: 'React',
+    image: 'project-img/sidework1.png',
+
     tech: ['React', 'Redux', 'Material UI', 'Chart.js'],
     liveLink: 'https://example.com',
     githubLink: 'https://github.com/example',
@@ -20,8 +20,8 @@ const projects = [
     id: 2,
     name: 'Travel Companion App',
     desc: 'Mobile-friendly travel app that helps users discover attractions, restaurants, and hotels based on geolocation.',
-    image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2021&q=80',
-    tag: 'Full Stack',
+    image: 'project-img/sidework2.png',
+
     tech: ['React', 'Node.js', 'Express', 'MongoDB'],
     liveLink: 'https://example.com',
     githubLink: 'https://github.com/example',
@@ -30,8 +30,8 @@ const projects = [
     id: 3,
     name: 'Portfolio Website',
     desc: 'A modern, responsive portfolio website with dark mode and smooth animations built with React.',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80',
-    tag: 'UI/UX',
+    image: 'project-img/work1.png',
+
     tech: ['React', 'CSS3', 'Framer Motion'],
     liveLink: 'https://example.com',
     githubLink: 'https://github.com/example',
@@ -40,8 +40,8 @@ const projects = [
     id: 4,
     name: 'Task Management System',
     desc: 'Collaborative task management application with team features, notifications, and progress tracking.',
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80',
-    tag: 'Web App',
+    image: 'project-img/work2.jpg',
+  
     tech: ['React', 'Firebase', 'Tailwind CSS'],
     liveLink: 'https://example.com',
     githubLink: 'https://github.com/example',
@@ -50,8 +50,8 @@ const projects = [
     id: 5,
     name: 'Fitness Tracker',
     desc: 'A fitness tracking application that allows users to set goals, track workouts, and monitor progress over time.',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    tag: 'Mobile App',
+    image: 'project-img/work3.png',
+
     tech: ['React Native', 'Redux', 'Firebase'],
     liveLink: 'https://example.com',
     githubLink: 'https://github.com/example',
@@ -60,32 +60,12 @@ const projects = [
     id: 6,
     name: 'Weather App',
     desc: 'Weather application with 7-day forecast, real-time updates, and location-based weather information.',
-    image: 'https://images.unsplash.com/photo-1527482797697-8795b05a13fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    tag: 'API',
+    image: 'project-img/work4.png',
+
     tech: ['JavaScript', 'OpenWeather API', 'CSS3'],
     liveLink: 'https://example.com',
     githubLink: 'https://github.com/example',
-  },
-  {
-    id: 7,
-    name: 'Chat Application',
-    desc: 'Real-time chat application with private messaging, group chats, and media sharing capabilities.',
-    image: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    tag: 'WebSocket',
-    tech: ['React', 'Socket.io', 'Express', 'MongoDB'],
-    liveLink: 'https://example.com',
-    githubLink: 'https://github.com/example',
-  },
-  {
-    id: 8,
-    name: 'Recipe Finder',
-    desc: 'Recipe search application that helps users discover dishes based on available ingredients with filtering options.',
-    image: 'https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2067&q=80',
-    tag: 'Web App',
-    tech: ['React', 'Redux', 'Spoonacular API'],
-    liveLink: 'https://example.com',
-    githubLink: 'https://github.com/example',
-  },
+  }
 ];
 
 export default function Projects() {
@@ -119,7 +99,6 @@ export default function Projects() {
                 <img src={project.image} alt={project.name} className="project-image" />
                 <div className="project-overlay"></div>
               </div>
-              <Box className="project-tag-small">{project.tag}</Box>
               <Typography className="project-title-small">
                 {project.name}
               </Typography>

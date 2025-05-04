@@ -18,7 +18,8 @@ function HideOnScroll(props) {
 }
 
 const navItems = [
-  { label: 'About', href: '#about', id: 'about' },
+  { label: 'Home', href: '#home', id: 'home' },
+  { label: 'About Me', href: '#about', id: 'about' },
   { label: 'Blog', href: '#blog', id: 'blog' },
   { label: 'Education', href: '#education', id: 'education' },
   { label: 'Skills', href: '#skills', id: 'skills' },
@@ -27,7 +28,7 @@ const navItems = [
 ];
 
 export default function Header() {
-  const [active, setActive] = useState('about');
+  const [active, setActive] = useState('home');
   const [mobileMenuAnchor, setMobileMenuAnchor] = useState(null);
   const [scrolled, setScrolled] = useState(false);
 
@@ -52,7 +53,7 @@ export default function Header() {
       
       // Update active section
       const offset = 120;
-      let current = 'about';
+      let current = 'home';
       for (const item of navItems) {
         const section = document.getElementById(item.id);
         if (section && section.offsetTop <= scrollPosition + offset) {

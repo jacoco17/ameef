@@ -1,128 +1,143 @@
-import React, { useEffect, useRef } from 'react';
-import { Box, Container, Grid, Typography, Chip, Button, Divider } from '@mui/material';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Button,
+  Divider
+} from '@mui/material';
+
+// Import icons
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
-import SpeedIcon from '@mui/icons-material/Speed';
-import { useInView } from 'react-intersection-observer';
+import StorageIcon from '@mui/icons-material/Storage';
+import CloudIcon from '@mui/icons-material/Cloud';
+import BrushIcon from '@mui/icons-material/Brush';
+import AndroidIcon from '@mui/icons-material/Android';
+import GetAppIcon from '@mui/icons-material/GetApp';
+
+// Import CSS
 import '../assets/premium-about.css';
 
 const About = () => {
-  const { ref: sectionRef, inView } = useInView({
-    threshold: 0.2,
+  const [ref, inView] = useInView({
     triggerOnce: true,
+    threshold: 0.1,
   });
 
-  // Skills array for the chip display
-  const skills = [
-    'JavaScript (ES6+)',
-    'React.js',
-    'Next.js',
-    'TypeScript',
-    'Node.js',
-    'Material UI',
-    'Tailwind CSS',
-    'Git & GitHub',
-    'Responsive Design',
-    'REST APIs',
-  ];
-
-  const qualities = [
+  // Areas of expertise data
+  const expertiseAreas = [
     {
-      icon: <CodeIcon />,
-      title: "Clean Code",
-      description: "Writing maintainable, well-structured code that follows best practices and industry standards."
+      id: 1,
+      icon: <CodeIcon fontSize="large" />,
+      title: "Frontend Development",
+      skills: ["React", "Next.js", "Vue.js", "JavaScript", "TypeScript", "HTML5/CSS3"]
     },
     {
-      icon: <DesignServicesIcon />,
-      title: "UI/UX Focus",
-      description: "Creating intuitive interfaces with attention to detail and exceptional user experiences."
+      id: 2,
+      icon: <StorageIcon fontSize="large" />,
+      title: "Backend Development",
+      skills: ["Node.js", "Express", "MongoDB", "PostgreSQL", "REST APIs", "GraphQL"]
     },
     {
-      icon: <SpeedIcon />,
-      title: "Performance",
-      description: "Optimizing for speed and efficiency to deliver fast-loading and responsive applications."
+      id: 3,
+      icon: <DesignServicesIcon fontSize="large" />,
+      title: "UI/UX Design",
+      skills: ["Figma", "Adobe XD", "Wireframing", "Prototyping", "User Research"]
+    },
+    {
+      id: 4,
+      icon: <CloudIcon fontSize="large" />,
+      title: "DevOps & Cloud",
+      skills: ["Docker", "AWS", "CI/CD", "Kubernetes", "Serverless"]
+    },
+    {
+      id: 5,
+      icon: <BrushIcon fontSize="large" />,
+      title: "Creative Development",
+      skills: ["GSAP", "Three.js", "Canvas", "SVG Animation", "WebGL"]
+    },
+    {
+      id: 6,
+      icon: <AndroidIcon fontSize="large" />,
+      title: "Mobile Development",
+      skills: ["React Native", "Flutter", "Progressive Web Apps", "Responsive Design"]
     }
   ];
 
   return (
-    <Box component="section" id="about" className="section-about" ref={sectionRef}>
-      <Container maxWidth="lg">
-        <Box className="about-section-header">
-          <Box className="about-section-tag">
-            <Box className="about-line"></Box>
-            <Typography 
-              variant="overline"
-              className="about-tag-text"
-            >
-              ABOUT ME
-            </Typography>
-          </Box>
-          
-          <Typography variant="h2" className="about-main-heading">
-            Crafting Digital Experiences
+    <Box id="about" className="section-about">
+      <Container>
+        {/* Section Header */}
+        <Box className="about-new-header">
+          <Typography variant="h2" className="about-new-title">
+            About <span className="text-gradient">Me</span>
           </Typography>
-          
-          <Typography variant="subtitle1" className="about-subtitle">
-            Developer with a passion for creating premium web applications
-          </Typography>
+          <div className="about-new-underline"></div>
         </Box>
 
-        <Grid container spacing={4} className="about-main-content">
-          {/* Full width content column */}
-          <Grid item xs={12}>
-            <Box className={`about-content ${inView ? 'fade-in' : ''}`}>
-              <Typography className="about-bio" variant="body1">
-                Hello! I'm <span className="highlight">Ameef</span>, a passionate frontend developer with a keen eye for design 
-                and a strong focus on creating intuitive, responsive, and accessible websites. 
-                With several years of experience in web development, I specialize in 
-                building exceptional digital experiences using modern technologies.
+        {/* Main Content Container */}
+        <Box ref={ref} className={`about-new-container ${inView ? 'fade-in' : ''}`}>
+          {/* Bio Card */}
+          <Box className="about-bio-card">
+            <Typography variant="h5" className="bio-heading">
+              My Journey
+            </Typography>
+            
+            <Typography variant="body1" className="bio-text">
+              I am a passionate full-stack developer with over 5 years of experience crafting digital experiences that make a difference. My journey began with a fascination for how technology can solve real-world problems, which led me to pursue formal education in Computer Science.
+            </Typography>
+            
+            <Typography variant="body1" className="bio-text">
+              I've since worked with startups, agencies, and enterprise clients to build everything from responsive web applications to complex software solutions. My approach combines technical expertise with creative problem-solving, always keeping the end-user in mind.
+            </Typography>
+            
+            <Box className="bio-philosophy">
+              <Typography variant="subtitle1" className="philosophy-title">
+                My Philosophy
               </Typography>
-
-              <Typography className="about-bio" variant="body1">
-                My approach combines technical expertise with creative problem-solving
-                to deliver solutions that not only meet but exceed client expectations.
-                I'm constantly learning and adapting to the ever-evolving landscape of
-                web development to ensure that I can provide cutting-edge solutions.
+              <Typography variant="body2" className="philosophy-text">
+                "I believe that great technology should be both powerful and invisible. My goal is to create digital experiences that not only look beautiful but also solve real problems and bring joy to users."
               </Typography>
-              
-              <Box className="about-qualities-container">
-                {qualities.map((quality, index) => (
-                  <Box key={index} className="about-quality-card">
-                    <Box className="quality-icon">{quality.icon}</Box>
-                    <Typography variant="h6" className="quality-title">{quality.title}</Typography>
-                    <Typography variant="body2" className="quality-description">{quality.description}</Typography>
-                  </Box>
-                ))}
-              </Box>
-
-              <Divider className="about-divider" />
-
-              <Typography className="skills-title" variant="h6">
-                Technologies I work with:
-              </Typography>
-
-              <Box className="skills-container">
-                {skills.map((skill, index) => (
-                  <Box key={index} className="skill-chip">
-                    {skill}
-                  </Box>
-                ))}
-              </Box>
-
-              <Button 
-                component="a"
-                className="resume-button"
-                endIcon={<ArrowOutwardIcon />}
-                href="/resume.pdf"
-                target="_blank"
-                style={{ color: "#ffffff" }}
-              >
-                View Resume
-              </Button>
             </Box>
-          </Grid>
-        </Grid>
+            
+            <Box className="bio-details">
+              <Box className="bio-detail-item">
+                <Typography variant="body2" className="bio-detail-label">
+                  <CalendarTodayIcon fontSize="small" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+                  Experience
+                </Typography>
+                <Typography variant="body2" className="bio-detail-value">
+                  5+ Years
+                </Typography>
+              </Box>
+              
+              <Box className="bio-detail-item">
+                <Typography variant="body2" className="bio-detail-label">
+                  <WorkIcon fontSize="small" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+                  Availability
+                </Typography>
+                <Typography variant="body2" className="bio-detail-value">
+                  Open to Work
+                </Typography>
+              </Box>
+            </Box>
+            
+            <Button
+              variant="contained"
+              className="about-resume-button"
+              endIcon={<GetAppIcon />}
+              href="/resume.pdf"
+              target="_blank"
+            >
+              Download Resume
+            </Button>
+          </Box>
+        </Box>
       </Container>
     </Box>
   );

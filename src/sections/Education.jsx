@@ -15,28 +15,28 @@ const Education = () => {
       school: "Western Mindanao State University",
       degree: "BS in Information Technology • 2021 – Present",
       description: "Mobile and Web hybrid development and database management",
-      image: "/wmsu.png"
+      logo: "/wmsu.png"
     },
     {
       id: 2,
       school: "Filipino Turkish Tolerance School",
       degree: "Junior & Senior High School – HUMSS Strand • 2015 – 2021",
       description: "95% with High Honor | Athletic Award",
-      image: "/turkish-school.jpg"
+      logo: "/turkish-school.jpg"
     },
     {
       id: 3,
       school: "Bongao Adventist Elementary School",
       degree: "Elementary • 2012 – 2015",
       description: "Silver Medalist | Excellence Award, Best in Math",
-      image: "/adventist.jpg"
+      logo: "/adventist.png"
     },
     {
       id: 4,
       school: "Notre Dame of Bongao",
       degree: "Kindergarten & Elementary • 2008 – 2012",
       description: "Top 3 Student in class",
-      image: "/notre-dame.jpg"
+      logo: "/notre-dame.jpg"
     }
   ];
 
@@ -54,8 +54,7 @@ const Education = () => {
             Education
           </Typography>
           <Typography 
-            className="education-subtitle" 
-            sx={{ textAlign: 'center', maxWidth: '700px', mx: 'auto' }}
+            className="education-subtitle"
           >
             My academic journey through various institutions that shaped my knowledge and expertise
           </Typography>
@@ -71,7 +70,7 @@ const Education = () => {
             >
               <Box className="education-logo-container">
                 <img 
-                  src={item.image} 
+                  src={item.logo} 
                   alt={item.school} 
                   className="education-logo"
                 />

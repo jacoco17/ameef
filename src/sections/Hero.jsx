@@ -55,7 +55,7 @@ const Hero = () => {
   }, []);
   
   return (
-    <Box component="section" id="hero" className="hero-section" ref={ref}>
+    <Box component="section" id="home" className="hero-section" ref={ref}>
       <Container>
         <Grid container spacing={6} alignItems="center">
           {/* Left Column - Text Content */}

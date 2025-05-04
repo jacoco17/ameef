@@ -358,21 +358,7 @@
   box-shadow: 0 15px 35px -5px rgba(50, 69, 99, 0.15);
 }
 
-.project-tag-small {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: linear-gradient(to right, rgb(150, 40, 40), rgb(180, 50, 50));
-  color: rgb(255, 255, 255);
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  z-index: 2;
-  box-shadow: 0 3px 10px rgba(150, 40, 40, 0.2);
-}
+
 
 .project-title-small {
   padding: 1rem 1.5rem 0.5rem;

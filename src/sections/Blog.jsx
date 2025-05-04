@@ -17,7 +17,7 @@ import { useInView } from 'react-intersection-observer';
 import CloseIcon from '@mui/icons-material/Close';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import '../assets/premium-blog.css';
-import { blogData, fallbackImages } from '../data/blogData';
+import { blogData } from '../data/blogData';
 
 const Blog = () => {
   const { ref, inView } = useInView({
@@ -35,13 +35,6 @@ const Blog = () => {
 
   const handleCloseModal = () => {
     setModalOpen(false);
-  };
-
-  const getImage = (src, index, day) => {
-    // Try to use the provided image path, fall back to placeholder if it fails
-    if (src && src.startsWith('http')) return src;
-    // Use fallback image based on day index if image doesn't load
-    return fallbackImages[(day - 1) % fallbackImages.length];
   };
 
   return (
@@ -71,12 +64,8 @@ const Blog = () => {
                   <CardMedia
                     component="img"
                     className="blog-card-media"
-                    image={getImage(blog.coverImage, 0, blog.day)}
+                    image={blog.coverImage}
                     alt={blog.title}
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = fallbackImages[(blog.day - 1) % fallbackImages.length];
-                    }}
                   />
                   <Box className="blog-day-badge">Day {blog.day}</Box>
                 </Box>
@@ -144,15 +133,9 @@ const Blog = () => {
                       <Grid item xs={12} sm={4} key={index}>
                         <Box className="blog-image-container">
                           <img 
-                            src={getImage(image.src, index, selectedBlog.day)}
+                            src={selectedBlog.images[index].src}
                             alt={image.alt}
                             className="blog-detail-image"
-                            onError={(e) => {
-                              e.target.onerror = null;
-                              // Use different fallback images based on index
-                              const fallbackIndex = (selectedBlog.day + index) % fallbackImages.length;
-                              e.target.src = fallbackImages[fallbackIndex];
-                            }}
                           />
                           <Typography className="blog-image-caption">
                             {image.caption}

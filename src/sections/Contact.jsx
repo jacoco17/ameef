@@ -9,6 +9,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import '../assets/premium-contact.css';
 
 export default function Contact() {
@@ -158,17 +159,17 @@ export default function Contact() {
               </Box>
               
               <Box className="social-links">
-                <a href="#" className="social-link" aria-label="Facebook">
+                <a href="https://www.facebook.com/Ameeffy" className="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                   <FacebookIcon />
                 </a>
-                <a href="#" className="social-link" aria-label="Twitter">
+                <a href="https://x.com/Meeffmeeff?s=21" className="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
                   <TwitterIcon />
                 </a>
-                <a href="#" className="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/ameeffy-adjarail-889477363/" className="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                   <LinkedInIcon />
                 </a>
-                <a href="#" className="social-link" aria-label="GitHub">
-                  <GitHubIcon />
+                <a href="https://www.instagram.com/ameeffy" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                  <InstagramIcon />
                 </a>
               </Box>
             </Box>

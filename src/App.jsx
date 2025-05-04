@@ -8,6 +8,7 @@ import Blog from './sections/Blog';
 import Education from './sections/Education';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
+import Certificates from './sections/Certificates';
 import Contact from './sections/Contact';
 import BlogDetail from './pages/BlogDetail';
 import './premium-ui.css';
@@ -49,6 +50,8 @@ const Home = () => {
           <Skills />
           <div className="premium-section-divider"></div>
           <Projects />
+          <div className="premium-section-divider"></div>
+          <Certificates />
           <div className="premium-section-divider"></div>
           <Contact />
         </Container>
