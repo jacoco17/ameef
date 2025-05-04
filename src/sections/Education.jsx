@@ -55,6 +55,14 @@ const Education = () => {
           </Typography>
           <Typography 
             className="education-subtitle"
+            sx={{ 
+              position: 'relative',
+              zIndex: 2,
+              marginBottom: '50px !important',
+              marginTop: '30px !important',
+              maxWidth: '800px',
+              padding: '0 20px'
+            }}
           >
             My academic journey through various institutions that shaped my knowledge and expertise
           </Typography>

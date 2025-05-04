@@ -22,6 +22,7 @@
   text-align: center;
   margin-bottom: 60px;
   position: relative;
+  z-index: 3;
 }
 
 .education-title {
@@ -52,9 +53,11 @@
   color: var(--text-secondary);
   font-size: 1.1rem;
   max-width: 700px;
-  margin: 0 auto 30px;
+  margin: 30px auto 50px !important;
   line-height: 1.7;
   text-align: center;
+  position: relative;
+  z-index: 3;
 }
 
 .education-cards {
@@ -64,6 +67,7 @@
   max-width: 800px;
   margin: 0 auto;
   position: relative;
+  z-index: 2;
 }
 
 .education-cards::before {
@@ -75,6 +79,7 @@
   width: 2px;
   background: linear-gradient(to bottom, transparent, rgba(180, 50, 50, 0.3), transparent);
   z-index: 0;
+  pointer-events: none;
 }
 
 .education-card {

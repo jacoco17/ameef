@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Card, CardContent, Avatar, Stack } from '@mui/material';
+import { Box, Typography, Card, CardContent, Avatar, Stack, Container, Divider } from '@mui/material';
 
 const educationData = [
   {
@@ -31,10 +31,24 @@ const educationData = [
 export default function Education() {
   return (
     <Box sx={{ mt: 4 }}>
-      <Typography variant="h3" fontWeight={700} color="white" align="center" gutterBottom>
-        Education
-      </Typography>
-      <Stack spacing={4} sx={{ mt: 4 }}>
+      {/* Header Section */}
+      <Container maxWidth="md" sx={{ mb: 6 }}>
+        <Typography variant="h3" fontWeight={700} color="white" align="center" gutterBottom>
+          Education
+        </Typography>
+        <Typography 
+          variant="subtitle1" 
+          color="#e0e0e0" 
+          align="center"
+          sx={{ mb: 3 }}
+        >
+          My academic journey through various institutions that shaped my knowledge and expertise
+        </Typography>
+        <Divider sx={{ mt: 3, mb: 3, backgroundColor: 'rgba(255,255,255,0.1)' }} />
+      </Container>
+
+      {/* Education Cards */}
+      <Stack spacing={4}>
         {educationData.map((edu) => (
           <Card
             key={edu.school}
